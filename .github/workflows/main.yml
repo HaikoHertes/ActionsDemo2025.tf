@@ -42,7 +42,7 @@ jobs: # Jobs run in parallel by default
 
     - name: Switch to Terraform folder
       id: terraform_folder
-      run: cd ./Terraform
+      run: cd Terraform
 
     - name: Terraform Init
       id: terraform_init
