@@ -40,6 +40,10 @@ jobs: # Jobs run in parallel by default
       id: terraform_setup
       uses: hashicorp/setup-terraform@v3
 
+    - name: Switch to Terraform folder
+      id: terraform_folder
+      run: cd ./Terraform
+
     - name: Terraform Init
       id: terraform_init
       run: terraform init -backend-config="storage_account_name=$STORAGE_ACCOUNT_NAME" -backend-config="container_name=$STORAGE_CONTAINER_NAME" -backend-config="resource_group_name=$RESOURCE_GROUP"  
