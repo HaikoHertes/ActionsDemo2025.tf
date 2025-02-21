@@ -46,7 +46,7 @@ jobs: # Jobs run in parallel by default
 
     - name: Terraform Plan
       id: terraform_plan
-      run: terraform plan -no-color
+      run: terraform plan -input=false
 
     - name: Terraform Apply
       id: terraform_apply
