@@ -24,6 +24,10 @@ jobs: # Jobs run in parallel by default
       STORAGE_CONTAINER_NAME: ${{ secrets.STORAGE_CONTAINER_NAME }}
       RESOURCE_GROUP: 'RG-ActionsDemo2025'
       DEPLOYMENT_NAME: 'ActionsDemo2025'
+      ARM_CLIENT_ID: ${{ secrets.AZURE_CREDS.clientId }}
+      ARM_CLIENT_SECRET: ${{ secrets.AZURE_CREDS.clientSecret }}
+      ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_CREDS.subscriptionId }}
+      ARM_TENANT_ID: ${{ secrets.AZURE_CREDS.tenantId }}
 
     steps: # List of steps to run in the job sequentially
 
